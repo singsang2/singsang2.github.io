@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Module 1 Project - Blog"
-date:       2020-07-31 16:54:18 +0000
+title:      "Module 1 Project"
+date:       2020-07-31 12:54:19 -0400
 permalink:  module_1_project_-_blog
 ---
 

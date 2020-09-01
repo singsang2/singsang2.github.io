@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Mod 2 Project: Statistics Models "
-date:       2020-09-01 00:32:51 +0000
+title:      "Mod 2 Project Statistics Models "
+date:       2020-08-31 20:32:52 -0400
 permalink:  mod_2_project_statistics_models
 ---
 

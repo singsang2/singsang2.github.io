@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "Introduction"
+title:      "Tweet Sentiment Analysis"
 date:       2020-10-06 17:52:14 -0400
 permalink:  mod_3_project
 ---

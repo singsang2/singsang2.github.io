@@ -1,13 +1,13 @@
 ---
 layout: post
-title:      "Product/Service Monitoring System"
+title:      "Dashboard: Product/Service Monitoring System"
 date:       2020-10-30 21:19:56 -0400
 permalink:  diving_into_nlp
 ---
 
 
-This project was inspired `sentdex`. (https://github.com/Sentdex/socialsentiment/)
-Project Repository: https://github.com/singsang2/capstone-twitter-analysis
+This project was inspired `sentdex`. <a href='https://github.com/Sentdex/socialsentiment'>LINK</a>
+Project Repository: <a href='https://github.com/singsang2/capstone-twitter-analysis'>LINK</a>
 
 **How to use this project**
 
@@ -41,7 +41,7 @@ The goals of this project are to
 
 ## Models Used
 
-<img src='images/model_comparison.png' width='500px'>
+<img src='https://github.com/singsang2/capstone-twitter-analysis/blob/main/images/model_comparison.png' width='500px'>
 
 BERT model has accuracy of 84%, however due to its computing time, VADER was used as an initial model to classify polarity of each tweet. The BERT model was used to confirm any strongly negative sentiment tweets classified by VADER.
 
@@ -49,7 +49,7 @@ BERT model has accuracy of 84%, however due to its computing time, VADER was use
 
 ## Dashboard
 
-<img src='images/dashboard_1.png'>
+<img src='https://github.com/singsang2/capstone-twitter-analysis/blob/main/images/dashboard_1.png'>
 
 **Keyword**
 You are able to select up to two keywords to monitor online. If you choose to choose two keywords, you **must** separate them by a comma!
@@ -62,17 +62,17 @@ This graph represents moving average value of sentiments towards the keywords yo
 **Graph2**
 This pie graph represents sentiment distribution towards your keyword.
 
-<img src='images/dashboard_2.png'>
+<img src='https://github.com/singsang2/capstone-twitter-analysis/blob/main/images/dashboard_2.png'>
 
 By clicking `Generate Word Cloud`, it generates frequently used words in tweets related to the keywords for each sentiment. 
 
-<img src='images/dashboard_3.png'>
+<img src='https://github.com/singsang2/capstone-twitter-analysis/blob/main/images/dashboard_3.png'>
 
 **Table1**
 This table shows recent tweets sent filtered by the keywords chosen. You are able to click on `link` button to access the actual tweet.
 
 **Table2**
-This table shows recent flagged tweets that are strongly negative.
+This table shows recent flagged tweets that are strongly negative or strongly positive.
 
 **Saving data into .csv file**
 You **must** click `GENERATE CSV FILE` before you can download the files. You can either download the whole raw tweet data or just the flagged ones.

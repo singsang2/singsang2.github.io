@@ -6,12 +6,13 @@ permalink:  module_1_project_-_blog
 ---
 
 Repository Link: https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model
+
 # Introduction
 
 Multivariable linear regression models can be used to predict the outcomes of an event that depends on multiple factors. There are mainly two types of goals we could focus on when making a model and they are:
     1) predictable model
     2) interpretable model.
-<img src='different_models.png'>
+<img src='https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model/blob/master/different_models.png'>
 source: https://towardsdatascience.com/the-balance-accuracy-vs-interpretability-1b3861408062
 
     - Predictable model
@@ -29,14 +30,15 @@ The objective is to use the given data along with other relevant outside data to
 Based on multiple EDA's, we have concluded the following factors might be affecting the house prices:
 
 ### Seasonal Factor
-<img src="img/seasons.png"> <img src='img/month.png'>
+<img src="https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model/blob/master/img/seasons.png"> <img src='img/month.png'>
 As we can see from the two graphs above, depending on time of the year, the total house sale price differ.
 > 'season' was added as categorical data in the model
 
 ### Geographical Factor
-<img src='img/geography.png'>
+<img src='https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model/blob/master/img/geography.png'>
 From the figure above, it becomes apparent that the house prices are affected by geographical locations. For example, the following graph shows house prices for depending on the distance from Microsoft HQ.
-<img src='img/MSHQ.png'>
+According the graph above, the mean distance and the price have negative association which makes sense since further away from valuable site (MS HQ), the land value also could drop as well.
+<img src='https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model/blob/master/img/MSHQ.png'>
 According the graph above, the mean distance and the price have negative association which makes sense since further away from valuable site (MS HQ), the land value also could drop as well.
 
 > The following were added as continuous predictors to our model:
@@ -50,7 +52,7 @@ Mortgage rate is one of the major factor that could shift people from buying or 
 
 ### Available Living Space Factor
 The square footage of the living space was divided by the number of rooms to represent how spacious each room would be for a given house. 
-<img src='img/living_space.png'>
+<img src='https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model/blob/master/img/living_space.png'>
 We observed a positive associated relationship between them.
 > living square footage / bedrooms was added as a continuous predictor in our model.
 
@@ -59,7 +61,7 @@ Lastly, we have noticed that `bathroom` numbers had a strong positive relationsh
         <br>1) amplified benefits for bathrooms with good qualities and
         <br>2) some penalties with bathrooms with poor qualities.
 The following regplot was generated using seaborn:
-<img src='img/bathrooms.png'>
+<img src='https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model/blob/master/img/bathrooms.png'>
 The graph showed a strong positive association.
 > Bathrooms x grades was added as a continuous predictor in our model.
 
@@ -108,16 +110,16 @@ The following API was used to obtain additional data:
 
 # Result (Model)
 
-<img src="img/regression.png" width=500>
+<img src="https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model/blob/master/img/regression.png" width=500>
 
 >The $r^2$ value turned out to be 0.725 which is not an ideal value but good 'enough' for an interpretable model.
 
 
-<img src="img/FinalQQ.png">
+<img src="https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model/blob/master/img/FinalQQ.png">
 
 >Even though there are slight non-normality at either ends, the residuals seem normal.
 <hr>
-<img src="img/ResidGraph.png">
+<img src="https://github.com/singsang2/Mod-2-Kings-County-Housing-Price-Model/blob/master/img/ResidGraph.png">
 
 >This residual graph shows that our model is homoscedastic but biased.
     - the model overpredicts low-priced houses

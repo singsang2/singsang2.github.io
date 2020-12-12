@@ -9,9 +9,9 @@ permalink:  back_to_the_futur_i_mean_ruby
 ## Introduction
 Over the century, the film industry have been exponentially growing not only in the developed countries, but also developing countries as well making.
 
-<img src='images/intro1.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/intro1.png'>
 
-<img src='images/intro2.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/intro2.png'>
 
 ## Problem Statement
 Microsoft sees all the big companies creating original video content, and they want to get in on the fun. They have decided to create a new movie studio, but the problem is they don’t know anything about creating movies. They have hired you to help them better understand the movie industry. Your team is charged with doing data analysis and creating a presentation that explores what ```type of films are currently doing the best at the box office```. You must then translate those findings into actionable insights that the CEO can use when deciding what type of films they should be creating.
@@ -190,7 +190,7 @@ df_movies.to_sql('movies', if_exists='append', con=conn)
 df_title_crew.to_sql('titleCrew', if_exists='append', con=conn)
 ```
 
-<img src="images/sqlite_map.png">
+<img src="https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/sqlite_map.png">
 
 The above figure shows how each tables are set.
 
@@ -2362,11 +2362,11 @@ ax.set(title='Average ratings for directors with Top 20 Domestic Gross',
 ## Action 1: Timeline
 So at first, let's take a look for which month to release your future movies.
 
-<img src='images/time_1.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/time_1.png'>
 
 The heatmap above shows average domestic gross profits from 1980 to 2019 by months (Note that 2020 was omitted due to 1) covid-19 and 2) incomplete data). As you can see, regardless of the year, there are some clear evidence that movies that are released in summer (May-July) and winter (Nov-Dec) have higher average domestic gross profit.
 
-<img src='images/time_2.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/time_2.png'>
 
 The above bar graph of average domestic gross profit and we see that May-July and Nov have significantly higher average domestic gross profits.
 
@@ -2390,7 +2390,7 @@ Due to a large range of production budgets, the films were categorized into the 
 
 ### Budget vs. ROI
 
-<img src='images/budget_1.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/budget_1.png'>
 
 The following can be observed from the graphs above:
 * lower budget films have chance to get extremely high ROI (>1000%) but with lower chance of breaking even
@@ -2405,7 +2405,7 @@ The graph above shows that greater the budget (notably above $100M)
     1) greater number of people vote (bigger size)
     2) higher average ratings (more green)
 
-<img src='images/budget_rating_violin.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/budget_rating_violin.png'>
 
 The above violin plot confirms that Mega-budget movies have significantly higher average ratings than lower budget movies.
 
@@ -2419,9 +2419,9 @@ The above violin plot confirms that Mega-budget movies have significantly higher
 
 ### Genre vs. profit/ROI
 
-<img src='images/genre_total_gross.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/genre_total_gross.png'>
 
-<img src='images/genre_ROI.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/genre_ROI.png'>
 
 From this two graphs above, we conclude that
 * Drama, action, and adventure genres result in higher total domestic gross profit.
@@ -2436,9 +2436,9 @@ So depending on which way you want to take, there are several viable options.
 
 ### Writers
 
-<img src='images/writer_total_gross.png'>
-<img src='images/writer_ROI.png'>
-<img src='images/writer_rating.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/writer_total_gross.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/writer_ROI.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/writer_rating.png'>
 
 According to the graphs above, the following conclusions could be made:
 * Jack Kirby and Stan Lee produced highest total domestic profit, however they are comic book writers.
@@ -2452,9 +2452,9 @@ According to the graphs above, the following conclusions could be made:
 
 ### Directors
 
-<img src='images/director_total_gross.png'>
-<img src='images/director_ROI.png'>
-<img src='images/director_rating.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/director_total_gross.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/director_ROI.png'>
+<img src='https://github.com/singsang2/dsc-mod-1-project-v2-1-onl01-dtsc-ft-070620/blob/master/images/director_rating.png'>
 
 According to the graphs above, the following conclusions could be made:
 * Russo brothers and Coffin produced highest total domestic profit, however they are comic book writers.

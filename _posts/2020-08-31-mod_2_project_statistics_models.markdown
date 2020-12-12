@@ -1,12 +1,9 @@
 ---
 layout: post
-title:      "Predicting Water Well Functionality in Tanzania"
+title:      "Predicting Water Well Functionality in Tanzania Using Ensemble Model"
 date:       2020-08-31 20:32:52 -0400
 permalink:  mod_2_project_statistics_models
 ---
-
-Author: Sung Bae
-Date: Oct 21, 2020
 
 There is no doubt that water is eseential part of human life. Without water, humans cannot last more than 3 days. However, not only the water is crucial in sustaining our lives, but it plays a crucial role in the following aspects of human lives:
 
@@ -18,7 +15,7 @@ Unfortunately, there are many people in the world who still do not have access t
 
 Thankfully, there have been many volunteers and organizations who made movements to correct this and have made a huge different over the years as shown below.
 
-<img src='img/cum_num_wells.png'>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/cum_num_wells.png'>
 
 As you can see from the figure above, there are more than 50,000 water wells installed since 1960. However there is a problem. We notice that more than 40% of the wells installed are either broken or need repair. However, it can be very difficult to determine which wells need repairs due to lack of well-organized managements.
 
@@ -58,7 +55,7 @@ In order to maximize the use of our dataset, various columns that were given by 
 
 ### Neighboring
 
-<img src='img/neighboring.png' width=400>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/neighboring.png' width=400>
 
 As you can see in the above figure, we see `clusters` of different classes of wells. So a new feature was made that calcuated the percentages of funcionalities of the wells near 30 KM raidus of each well.
 
@@ -66,17 +63,17 @@ As you can see in the above figure, we see `clusters` of different classes of we
 
 ### Percentages for funder, installer, and quantity
 
-<img src='img/funders.png' width=600>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/funders.png' width=600>
 
 When we examine `funders` and `installers` (see figure above), it becomes apparent that some funders and installers tend have more particularly classified wells. So for each funders and installers, percentage was found according to their functionality.
 
-<img src='img/quantity.png' width=600>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/quantity.png' width=600>
 
 The same can be said for `quantity` of water.
 
 ### Geographical Factor: Region
 
-<img src='img/geographical.png'>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/geographical.png'>
 
 Depending on which region, the following could be different:
 
@@ -103,7 +100,7 @@ Out main goal is to maximize the following metrics:
     - Even though recalls are important, it is also important to keep the overall accuracy as high as possible to minimize any unnecessary cost this model can cause.
    
 
-<img src="img/diagram.png">
+<img src="https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/diagram.png">
 
 Source: https://levelup.gitconnected.com/ensemble-learning-using-the-voting-classifier-a28d450be64d?gi=ea3aaf6cf1e8
 
@@ -128,9 +125,9 @@ We will mix both boosting and bagging algorithms to decrease bias and variance, 
 
 ### Best Accuracy: Adaboost
 
-<img src='img/best_accuracy_report.png' width=600>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/best_accuracy_report.png' width=600>
 
-<img src='img/best_accuracy_cm.png'>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/best_accuracy_cm.png'>
 
 Layer 1 Models Used: 
     - All of the layer 1 models were used.
@@ -143,8 +140,8 @@ Observations:
 
 ### Best Recall: RF
 
-<img src='img/best_recall_report.png' width=600>
-<img src='img/best_recall_cm.png'>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/best_recall_report.png' width=600>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/best_recall_cm.png'>
 
 Layer 1 Models Used: 
     - 'Gradient Boost'
@@ -161,7 +158,7 @@ Observations:
 
 ### Feature Importance
 
-<img src='img/correlation.png' width=600>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/correlation.png' width=600>
 
 Features that positively correlates to `functioning` wells:
 
@@ -182,7 +179,7 @@ Features that negatively correlates to `functioning` wells:
     [6] Neighboring - more nonfunctioning neighbors
     
 
-<img src='img/correlation_all.png' width=600>
+<img src='https://github.com/singsang2/Tanzanian-Water-Well-Project/blob/master/img/correlation_all.png' width=600>
 
 We expected `functional` wells to oppositely correlate to `non functioning` well as shown above. However we notice how it seems `need repair` wells are behaving.
 

@@ -1,203 +1,151 @@
 ---
 layout: post
-title:      "Predicting Water Well Functionality in Tanzania"
+title:      "This Repository Contains"
 date:       2020-10-06 17:52:14 -0400
 permalink:  mod_3_project
 ---
 
-Author: Sung Bae
-Date: Oct 21, 2020
 
-There is no doubt that water is eseential part of human life. Without water, humans cannot last more than 3 days. However, not only the water is crucial in sustaining our lives, but it plays a crucial role in the following aspects of human lives:
+- **Jupyter Notebook**: This notebook, <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/blob/master/Tweet_sentiment_analysis.ipynb">Tweet_sentiment_analysis.ipynb</a>, has Twitter sentiment analysis.
 
-    [1] Education accessibility
-    [2] Empowerment to families to overcome poverty
-    [3] Higher quality of lives
+- **Presentation**: This <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/blob/master/Tweet_sentiment_analysis.pptx">presentation</a> contains an "Executive Summary" that gives a brief overview of your problem/dataset, and each step of the data science process.
+
+- **Datasets**: This <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/tree/master/datasets">folder</a> contains all the datasets used in this project.
+
+- **Models**: This <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/tree/master/models">folder</a> contains all the models trained and used in this project.
+
+- **Additional Codes**: This <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/tree/master/src">folder</a> contains any other codes that were used for this project.
+
+# Introduction
+
+<img src='images/wordcloud_pos_neg.png'>
+
+    *Major vocabularies used in positive sentiments and negative sentiments.
+
+## Business Model
+
+Consumers' voices are getting much attention by big companies not only because their opnions matter, but also their reach of their voice is expanding due to growth of social media platforms such as Facebook, Instagram and Twitter. Thus, it is imperative to monitor and analyze how consumers are responding to one's product not only for customer service purpose, but also to analyze their trends.
+
+In this project, we will deal with a portion of what we have mentioned above. We will focus on identifying negative sentiments of Google, Apple and Android products from Twitter data.
+
+### Goals
+The goal of this project is to produce a model that can efficiently
+
+[1] identify tweets with negative sentiments towards a product (ex. Apple, Google, or Android products), and
+-  By identifying negative tweets, a company can provide relatively quick feedback to the customers which will improve brand's image and credibility.
+        
+[2] correctly categorize tweets into negative, neutral and positive sentiments.
+- By cumulating various sentiments about a company's various products, a company could read and predict people's trend.
+
+[Extra] We will also train a model that can identify which product a tweet is mentioning.
+- A company/brand usually has more than just one product (ex. Apple), so by correctly identifying which product tweets are mentioning, it will be more beneficial to the company be aware of their products review by people.
+
+## Data
+
+
+ [1]. The main dataset comes from CrowdFlower via data.world. <a href="https://data.world/crowdflower/brands-and-product-emotions">Data Link</a>
+
+ [2]. Amazon and Best Buy electronics review dataset. <a href="https://www.kaggle.com/datafiniti/amazon-and-best-buy-electronics">Data Link</a>
+
+ [3]. Amazon electronics review dataset: <a href="https://www.kaggle.com/datafiniti/consumer-reviews-of-amazon-products">Data Link</a>
+            
+
+# Models
+
+## Binary Model
+
+The following methods were used to prepare our binary classification text data:
+
+    [1] NLTK - TF-IDF vectorizer
+    [2] spaCy - TF-IDF vectorizer
+    [3] spaCy - word2vec word embedding.
     
-Unfortunately, there are many people in the world who still do not have access to clean water, and, in fact, more than half of the population of Tanzania do not have an easy access to water source. 
+Then either `MultinomialNB` or `LogisticRegression` were used to train the model.
 
-Thankfully, there have been many volunteers and organizations who made movements to correct this and have made a huge different over the years as shown below.
 
-<img src='img/cum_num_wells.png'>
 
-As you can see from the figure above, there are more than 50,000 water wells installed since 1960. However there is a problem. We notice that more than 40% of the wells installed are either broken or need repair. However, it can be very difficult to determine which wells need repairs due to lack of well-organized managements.
+## Multiclass Model
 
-So our goal is to make a classification model that successfully determine which wells are in need of repairs so that we would know which aspects of wells lead to malfunction.
+The following methods were used to prepare our multiclass classification text data:
 
-# Data
-
-## Provided Dataset
-
-The data that was used to train our models was provided by Taarifa and the Tanzanian Ministry of Water. You may also able to download the datasets from https://www.drivendata.org/competitions/7/pump-it-up-data-mining-the-water-table/page/23/. 
-
-### Dealing with class imbalance
-
-This dataset is a ternary classification with class imbalance.
-
-    [1] functional = 55.0%
-    [2] functional but needs repair = 6.83%
-    [3] non functional = 38.1%
+    [1] spaCy - TF-IDF vectorizer
+    [2] TextBlob - sentiment analyzer
+    [3] spaCy - word2vec word embedding.
+    [4] Added additional datasets from Amazon and Best Buy
     
-This class imbalance will be dealt by two methods:
+Then either `MultinomialNB` or `LogisticRegression` were used to train the model.
 
-    [1] SMOTE - oversampling with generated data
-    [2] class_weight - from sklearn.utils
 
-We will prioritize in using `class_weight` over `SMOTE` for `SMOTE` can cause unwanted bias in our dataset by generating more data.
 
-## Additional Dataset
+# Model Evaluation
 
-To obtain more geographical information about Tanzania, `geojson` data of Tanzania was obtained from the following website:
-https://github.com/thadk/GeoTZ
+## Binary Model
 
-## Feature Engineering
+The following table shows the top 5 model that performed for binary classification.
 
-Detailed exploration for each column was done in `Exploratory Note.ipynb`.
+<img src='images/binary_model_report.png' width='700'>
 
-In order to maximize the use of our dataset, various columns that were given by the government and Taarifa were dropped and also newly made.
+Logistic Regression model using word embedding did the best in terms for negative recalls; however it does have a longer average time to fit and predict the result signifcantly.
 
-### Neighboring
+<img src='images/computing_time.png' width='500'> <img src='images/negative_recalls.png' width='500'>
 
-<img src='img/neighboring.png' width=400>
+The best model was using `MulticlassNB` with spaCy's word embedding.
 
-As you can see in the above figure, we see `clusters` of different classes of wells. So a new feature was made that calcuated the percentages of funcionalities of the wells near 30 KM raidus of each well.
+<img src='images/binary_word_emb.png' width='500'>
 
-*The yellow circles do not represent 30KM radius in scaled. It is just there to show the idea!
+- Overall Test Accuracy: 81%
 
-### Percentages for funder, installer, and quantity
+- Overall Test Recall (weighted): 81%
 
-<img src='img/funders.png' width=600>
+- Negative Sentiment Recall: 74%
 
-When we examine `funders` and `installers` (see figure above), it becomes apparent that some funders and installers tend have more particularly classified wells. So for each funders and installers, percentage was found according to their functionality.
+## Multiclass Model
 
-<img src='img/quantity.png' width=600>
+The best model was using MulticlassNB with spaCy's word embedding.
 
-The same can be said for `quantity` of water.
+<img src='images/multi_word_emb.png' width='500'>
 
-### Geographical Factor: Region
 
-<img src='img/geographical.png'>
+- Overall Test Accuracy: 60%
 
-Depending on which region, the following could be different:
+- Overall Test Recall (weighted): 60%
 
-    [1] government funding
-    [2] regional government body
-    [3] population
-    [4] climate / geographical character
-    [5] amount of water available
+- Negative Sentiment Recall: you 71%
 
-So these regions were given with percentages of water wells' functionality.
+# Conclusion
 
-# Models and Results
+Our final models can
 
-Some useful codes used throughout the project can be found in `src/useful_codes.py`.
+    [1] Binary Sentiment
+        * Most 81% accuracy with 76% negative sentiment recall
+    [2] Multiclass Sentiment
+        * 60% accuracy with 71% negative sentiment recall 
+    [EXTRA] Product Predictor
+        * 91% of accuracy
 
-## Overall Goals
+## Recommendations
+We would recommend the following:
 
-Out main goal is to maximize the following metrics:
+[1] **Use binary sentiments (positive and negative)**
+   - Multiclass not only complicates the model itself, but also it dilutes negative and positive sentiments together, therefore, we recommend using binary sentiment classification model
     
-[1] Recall for `functioning but need repair` and `non funcional` wells
-    - In the context of this problem, it is imperative that we can detect which wells are either not functioning or in need of repair in order for people in Tanzania to access waterpoints.
-    
-[2] Overall accuracy
-    - Even though recalls are important, it is also important to keep the overall accuracy as high as possible to minimize any unnecessary cost this model can cause.
-   
+[2] **For the best negative recall model:** *logistic regression word-embedding model*
+   - this is the best model to flag negative sentiments but it does take some time to train; however, as long as the train is well-done, implementing the model should not cause significant calculation cost. (Further study should be done)
 
-<img src="img/diagram.png">
+[3] **For the fastest computing model:** *Naive Bayes' TF-IDF model with SMOTE*
+   - this model also did a great job in identifying negative sentiments, but it uses SMOTE which is not recommended in NLP analysis.
 
-Source: https://levelup.gitconnected.com/ensemble-learning-using-the-voting-classifier-a28d450be64d?gi=ea3aaf6cf1e8
+# Future Direction
 
-In order to achieve this, we will use various different base models as our first layer of our model. Then we will stack the models to make an unified model that has stronger predictive force compared to individual models from the first layer as shown above.
+[1] Further data acquisition:
+Due to imbalance in data, our model suffered. Acquiring similar datasets with more balanced classes would increase our model's performance and reliability.
 
-*Note that `voting` in the diagram above could be other form of meta-classifiers.
+[2] Real time Twitter analysis
+Have this model refined and put in a production so that it can monitor tweets real time and analyze and negative flags about any particular product.
 
-## Layer 1 Models
+[3] Research various costs between models
+Different models have different strengths and weaknesses, and we believe researching different costs including computing and labor costs using different models would allow us to choose a better model
 
-The following classifier models were made.
-
-    [1] Random Forest
-    [2] Gradient Boost
-    [3] Logistic Regression
-    [4] Extra Tress 
-    [5] Adaboost
-    [6] XGBoost
-    
-We will mix both boosting and bagging algorithms to decrease bias and variance, respectively.
-
-## Layer 2 Model
-
-### Best Accuracy: Adaboost
-
-<img src='img/best_accuracy_report.png' width=600>
-
-<img src='img/best_accuracy_cm.png'>
-
-Layer 1 Models Used: 
-    - All of the layer 1 models were used.
-    
-Observations:
-
-      [1] Difference between train and test accuracy show a sign that the model might be **overfit**.
-      [2] Highest accuracy of 81.32 %
-      [3] Actual competition accuracy of 78.81 %
-
-### Best Recall: RF
-
-<img src='img/best_recall_report.png' width=600>
-<img src='img/best_recall_cm.png'>
-
-Layer 1 Models Used: 
-    - 'Gradient Boost'
-    - 'Random Forest'
-    - 'K-Nearest Neighbor'
-    - 'Adaboost'
-    - 'Logistic Regression'
-    
-Observations:
-
-      [1] Difference between train and test accuracy show a sign that the model might be overfit a 'little'.
-      [2] Macro recall is 74%
-      [3] Effective recall is 81% for repair and 84% for nonfunctioning
-
-### Feature Importance
-
-<img src='img/correlation.png' width=600>
-
-Features that positively correlates to `functioning` wells:
-
-    [1] Installer - installers with better history
-    [2] funder - funder with better histotry
-    [3] water quantity - enough water quantity
-    [4] Altitude - higher altitude
-    [5] Payment - Existing payments for water usage
-    [6] Extractor type - gravity
-
-Features that negatively correlates to `functioning` wells:
-
-    [1] Water quantity - dry area
-    [2] Extractor - extractor other than gravity type
-    [3] Management - managed by VWC (village water committee)
-    [4] Water point name - water points with names (surprise)
-    [5] Payment - Lack of payments
-    [6] Neighboring - more nonfunctioning neighbors
-    
-
-<img src='img/correlation_all.png' width=600>
-
-We expected `functional` wells to oppositely correlate to `non functioning` well as shown above. However we notice how it seems `need repair` wells are behaving.
-
-# Further Studies
-
-The follow aspects of the project can be touched for further studies:
-    
-    [1] Finer tuning of each model in both layer 1 and 2.
-    [2] Incorporating more geographical features into the data
-    [3] Scraping or gathering more complete data
-    [4] Dealing with class imbalance in an alternative way
-
-
-```python
-
-```
-
+[4] Try different NLP techniques
+There are so many different NLP techniques and they are growing due to works of so many different research entities. It would be very valuable to try different approach including skip-gram and even deep learning NLP for this project.
 

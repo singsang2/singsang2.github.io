@@ -1,22 +1,11 @@
 ---
 layout: post
-title:      "This Repository Contains"
+title:      "Introduction"
 date:       2020-10-06 17:52:14 -0400
 permalink:  mod_3_project
 ---
 
-
-- **Jupyter Notebook**: This notebook, <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/blob/master/Tweet_sentiment_analysis.ipynb">Tweet_sentiment_analysis.ipynb</a>, has Twitter sentiment analysis.
-
-- **Presentation**: This <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/blob/master/Tweet_sentiment_analysis.pptx">presentation</a> contains an "Executive Summary" that gives a brief overview of your problem/dataset, and each step of the data science process.
-
-- **Datasets**: This <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/tree/master/datasets">folder</a> contains all the datasets used in this project.
-
-- **Models**: This <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/tree/master/models">folder</a> contains all the models trained and used in this project.
-
-- **Additional Codes**: This <a href="https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/tree/master/src">folder</a> contains any other codes that were used for this project.
-
-# Introduction
+Repository Link: https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/
 
 <img src='images/wordcloud_pos_neg.png'>
 

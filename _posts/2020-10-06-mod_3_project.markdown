@@ -7,7 +7,7 @@ permalink:  mod_3_project
 
 Repository Link: https://github.com/singsang2/dsc-mod-4-project-v2-1-onl01-dtsc-ft-070620/
 
-<img src='images/wordcloud_pos_neg.png'>
+<img src='https://github.com/singsang2/tweet-product-sentiment-analysis/blob/master/images/wordcloud_pos_neg.png'>
 
     *Major vocabularies used in positive sentiments and negative sentiments.
 
@@ -72,15 +72,15 @@ Then either `MultinomialNB` or `LogisticRegression` were used to train the model
 
 The following table shows the top 5 model that performed for binary classification.
 
-<img src='images/binary_model_report.png' width='700'>
+<img src='https://github.com/singsang2/tweet-product-sentiment-analysis/blob/master/images/binary_model_report.png' width='700'>
 
 Logistic Regression model using word embedding did the best in terms for negative recalls; however it does have a longer average time to fit and predict the result signifcantly.
 
-<img src='images/computing_time.png' width='500'> <img src='images/negative_recalls.png' width='500'>
+<img src='https://github.com/singsang2/tweet-product-sentiment-analysis/blob/master/images/computing_time.png' width='500'> <img src='images/negative_recalls.png' width='500'>
 
 The best model was using `MulticlassNB` with spaCy's word embedding.
 
-<img src='images/binary_word_emb.png' width='500'>
+<img src='https://github.com/singsang2/tweet-product-sentiment-analysis/blob/master/images/binary_word_emb.png' width='500'>
 
 - Overall Test Accuracy: 81%
 
@@ -92,7 +92,7 @@ The best model was using `MulticlassNB` with spaCy's word embedding.
 
 The best model was using MulticlassNB with spaCy's word embedding.
 
-<img src='images/multi_word_emb.png' width='500'>
+<img src='https://github.com/singsang2/tweet-product-sentiment-analysis/blob/master/images/multi_word_emb.png' width='500'>
 
 
 - Overall Test Accuracy: 60%
